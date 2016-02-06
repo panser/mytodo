@@ -35,3 +35,12 @@ grunt serve:dist
 
 scp -R dist ssh://remoteserver:/
 ```
+
+dist in git
+```
+git add dist && git commit -m "Initial dist subtree commit"
+git subtree push --prefix dist origin gh-pages
+
+now, to deploy the dist directory, you have always run
+git subtree push --prefix dist origin gh-pages
+```
